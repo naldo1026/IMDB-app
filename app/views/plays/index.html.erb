@@ -1,8 +1,6 @@
-<div class="container">
-  <% @plays.each do |play| %>
-    <%= link_to play.title , play_path(play) %>
-    <%= time_ago_in_words(play.created_at) %> ago
-  <% end %>
-  <br>
-  <%= link_to 'Create' , new_play_path %>
-</div>
+<% @plays.each do |play| %>
+  <%= link_to play.title , play_path(play) %>
+  <%= time_ago_in_words(play.created_at) %> ago
+<% end %>
+<br>
+<%= link_to 'Create' , new_play_path %>
