@@ -1,8 +1,7 @@
-<div class="container">
-  <%= simple_form_for @play do |f| %>
-    <%= f.input :title %>
-    <%= f.input :description %>
-    <%= f.input :director %>
-    <%= f.submit :Button %>
-  <% end %>
-</div>
+<%= simple_form_for @play do |f| %>
+  <%= select_tag(:category_id, options_for_select(@categories), :prompt_text => 'Select a Category') %>
+  <%= f.input :title %>
+  <%= f.input :description %>
+  <%= f.input :director %>
+  <%= f.submit :Button %>
+<% end %>
